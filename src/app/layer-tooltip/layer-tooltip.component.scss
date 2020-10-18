@@ -1,0 +1,55 @@
+@import '../../styles.scss';
+
+.layer-card {
+  width: 340px;
+  height: 80px;
+  background-color: white;
+  border-radius: 10px;
+
+  .layer-card-content {
+    position: absolute;
+    left: 10px;
+    top: 17px;
+    bottom: 17px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100px;
+
+    .layer-image {
+      border-radius: 5px;
+      flex: 1 0 100%;
+      margin-right: 20px;
+      object-fit: cover;
+      max-width: 60px;
+      max-height: 80px;
+    }
+
+    .layer-title {
+      color: $primary-text-color;
+      margin-bottom: 10px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .layer-description {
+      color: $primary-text-color;
+      font-size: 10px;
+      max-width: 250px;
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3; // max nb lines to show
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  .layer-action-button {
+    color: $primary-text-color;
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+  }
+}

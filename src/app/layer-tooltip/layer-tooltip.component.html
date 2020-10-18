@@ -1,0 +1,19 @@
+<div #layerTooltipCard class="layer-tooltip-wrapper">
+  <mat-card class="layer-card">
+    <mat-card-content class="layer-card-content">
+      <img src="{{ layerImageUrl }}" class="layer-image" alt="Layer overview">
+      <span class="layer-title">
+        {{ layerTitle }}
+      </span>
+      <span class="layer-description">
+        {{ layerDescription }}
+      </span>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-icon-button aria-label="More details" class="layer-action-button"
+        (click)="navigateToLayerDetails()">
+        <mat-icon>link</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

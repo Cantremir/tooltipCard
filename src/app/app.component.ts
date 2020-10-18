@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, QueryList, ViewChildren } from '@angular/core';
+import { LayerTooltipComponent } from './layer-tooltip/layer-tooltip.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  @ViewChildren(LayerTooltipComponent) tooltipList: QueryList<LayerTooltipComponent>;
+
   title = 'tooltipCard';
+
+  toggleTooltip(index): void {
+    const target = this.tooltipList.toArray()[index].toggle();
+    console.log(target);
+
+  }
+
 }
